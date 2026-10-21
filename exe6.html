@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+
+    <style>
+        #menu {
+            display: none;
+            background-color: pink;
+            padding: 10px;
+        }
+
+        #menu a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: black;
+        }
+
+        #menu a:hover {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 onclick="openMenu()">Menu\/ </h2>
+
+    <div id="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <script>
+        function openMenu() {
+            let menu = document.getElementById("menu");
+
+            if (menu.style.display == "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

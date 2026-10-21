@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #myDiv {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="maDiv"></div>
+  <button onclick="changerCouleur()">Change color</button>
+
+  <script>
+    function changerCouleur() {
+      let div = document.getElementById("myDiv");
+      div.style.backgroundColor = div.style.backgroundColor = "lightblue" ? "lightgreen" : "lightblue";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        #message {
+            background-color: rgb(153, 213, 223);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Responsive Page</h2>
+
+    <p id="message">Welcome</p>
+
+      
+
+    <script>
+        function changeLayout() {
+            let width = window.innerWidth;
+            let extra = document.getElementById("extra");
+            let message = document.getElementById("message");
+
+            if (width < 600) {
+                
+                message.textContent = "Welcome!";
+            } else {
+                
+                message.textContent = "Welcome to the page EVERYONE!";
+            }
+        }
+
+        window.addEventListener("resize", changeLayout);
+
+        changeLayout();
+    </script>
+
+</body>
+</html>

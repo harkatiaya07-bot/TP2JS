@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Progress Bar</title>
+
+    <style>
+        #container {
+            width: 300px;
+            background-color: lightgray;
+        }
+
+        #bar {
+            width: 0%;
+            height: 30px;
+            background-color: green;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Progress Bar</h2>
+
+    <div id="container">
+        <div id="bar">0%</div>
+    </div>
+
+    <br>
+
+    <button onclick="startProgress()">Start</button>
+
+    <script>
+        function startProgress() {
+            let width = 0;
+            let bar = document.getElementById("bar");
+
+            let timer = setInterval(function() {
+                if (width >= 100) {
+                    clearInterval(timer);
+                } else {
+                    width++;
+                    bar.style.width = width + "%";
+                    bar.textContent = width + "%";
+                }
+            },  );
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <h2>Calculator</h2>
+
+    <label>First number:</label>
+    <input type="number" id="n1">
+    <br><br>
+
+    <label>Second number:</label>
+    <input type="number" id="n2">
+    <br><br>
+
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+
+    <h3 id="result">Result: </h3>
+
+    <script>
+        function calculate(operation) {
+            let a = Number(document.getElementById("n1").value);
+            let b = Number(document.getElementById("n2").value);
+            let r;
+
+            if (operation = '+') {
+                r = a + b;
+            } else if (operation = '-') {
+                r = a - b;
+            } else if (operation = '*') {
+                r = a * b;
+            } else if (operation = '/') {
+                if (b = 0) {
+                    document.getElementById("result").textContent =
+                        "Division by zero is not possible!";
+                    return;
+                }
+                r = a / b;
+            }
+
+            document.getElementById("result").textContent =
+                "Result: " + r;
+        }
+    </script>
+
+</body>
+</html>
